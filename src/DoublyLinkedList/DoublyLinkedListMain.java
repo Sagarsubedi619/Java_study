@@ -18,6 +18,5 @@ public class DoublyLinkedListMain {
            System.out.println(x.head.getNext());
        }
 
-
     }
 }
