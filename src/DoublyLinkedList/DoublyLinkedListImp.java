@@ -4,25 +4,25 @@ import LinkedList.Node;
 
 public class DoublyLinkedListImp {
     DoublyNode head;
-    DoublyNode tail;
+
 
     public void InsertAtHead(int Data){
         DoublyNode newNode= new DoublyNode(Data);
         newNode.setNext(head);
-        head=newNode.getNext();
+        if(head!=null){
+            head.setPrevious(newNode);
+        }
+        head=newNode;
+
     }
-    public void InsertAtTail(int Data){
-        DoublyNode newNode=new DoublyNode(Data);
-        newNode.setPrevious(tail);
-        tail=newNode.getPrevious();
-    }
+
 
     @Override
     public String toString() {
         String result="{";
        DoublyNode currentHead=this.head;
         while(currentHead!=null){
-            result+= currentHead.toString()+" ,";
+            result+= currentHead+" ,";
             currentHead=currentHead.getNext();
         }
         result+="}";
