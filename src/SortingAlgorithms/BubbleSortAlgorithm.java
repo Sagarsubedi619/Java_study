@@ -1,3 +1,5 @@
+package SortingAlgorithms;
+
 public class BubbleSortAlgorithm {
     public int[] BubbleSortAlgorithmImplementation(int[] arrayNumbers) {
         int temp;

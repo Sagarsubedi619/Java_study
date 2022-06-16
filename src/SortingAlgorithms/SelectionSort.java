@@ -1,3 +1,5 @@
+package SortingAlgorithms;
+
 public class SelectionSort {
 
     public int[] SelctionSortImplementation(int[] nums) {
