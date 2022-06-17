@@ -14,15 +14,20 @@ public class BinaryTree {
 
     }
 
-    public int find(int data){
+    public TreeNode find(int data){
         if (this.rootNode!=null){
-            int x=0;
-            x=rootNode.find(data).getData();
-            return x;
+
+            return rootNode.find(data);
+
 
         }
         else {
-            return 0;
+            return null;
         }
+    }
+
+    public void Delete(int data){
+        TreeNode itemsToDelete=rootNode.find(data);
+        itemsToDelete.Delete();
     }
 }

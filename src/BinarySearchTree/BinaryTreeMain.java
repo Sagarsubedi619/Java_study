@@ -6,8 +6,9 @@ public class BinaryTreeMain {
         demo1.insert(6);
         demo1.insert(5);
         demo1.insert(4);
+        demo1.Delete(4);
 
-        System.out.println(demo1.find(4));
+        System.out.println(demo1.find(5).getData());
 
     }
 }

@@ -11,9 +11,10 @@ public class TreeNode {
     private int data;
     TreeNode leftChild;
     TreeNode rightChild;
+    private boolean isDeleted=false;
 
     public TreeNode find(int data){
-        if(this.data==data){
+        if(this.data==data && !isDeleted){
             return this;
         }
         if(data<this.data && leftChild!=null){
@@ -27,7 +28,7 @@ public class TreeNode {
 
     public void insert(int data){
         if(data>=this.data){
-            if(this.rightChild==null) {
+            if(this.rightChild==null && !isDeleted) {
                 this.rightChild = new TreeNode(data);
 
             }
@@ -55,5 +56,13 @@ public class TreeNode {
 
     public void setRightChild(TreeNode rightChild) {
         this.rightChild = rightChild;
+    }
+
+    public void Delete(){
+        isDeleted=true;
+    }
+
+    public boolean Deleted(){
+        return isDeleted;
     }
 }
